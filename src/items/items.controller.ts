@@ -18,12 +18,6 @@ import { Item } from './interfaces/items.interface';
 export class ItemsController {
   constructor(private readonly itemsService: ItemsService) {}
 
-  //   @Get()
-  //   findAll(@Req() req: Request, @Res() res: Response): Response {
-  //     console.log(req.url);
-  //     return res.status(200).send('hello world');
-  //   }
-
   @Get()
   async findAll(): Promise<Item[]> {
     return await this.itemsService.findAll();
